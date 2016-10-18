@@ -142,11 +142,11 @@ p{
 	width: 100%;
 	z-index: 10;
 }
-.sticky .header-top,.header{
+.sticky .header-top,.header, .header-top{
 	transition: all 0.4s ease;
 }
 .sticky .header-top{
-	padding: 10px 0;
+	padding: 5px 0;
 }
 /********************************************************
     ## Menu, Slider
