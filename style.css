@@ -61,7 +61,7 @@ p{
 	font-weight: normal;
 }
 .padding-null{
-	padding: 0;
+	padding: 0 !important;
 }
 .padding-gap-1,.parallax,.footer{
 	padding-top: 90px;
@@ -114,7 +114,7 @@ p{
 .overflow,.woocommerce ul.products li.product .price{
 	overflow: hidden;
 }
-.full-width,.footer-middle li a,.woocommerce .related .products .product-fix,.blog-article .calendar_wrap,.woocommerce-Reviews input,.wpcf7 label, .wpcf7 input, .wpcf7 select, .wpcf7 textarea,.wpcf7-form-control-wrap,.woocommerce .product-fix a.compare:before,.woocommerce .product-fix a.yith-wcqv-button:before,.widget-area .search-form label,.widget-area .search-form .search-field,.reply,.product-fix .product-hover,.product-fix .product-image .background-overlay,.woocommerce div.product form.cart .variations td,.woocommerce div.product form.cart .variations td.label,.woocommerce div.product form.cart .variations select,.sku_wrapper,.posted_in{
+.full-width,.footer-middle li a,.woocommerce .related .products .product-fix,.blog-article .calendar_wrap,.woocommerce-Reviews input,.wpcf7 label, .wpcf7 input, .wpcf7 select, .wpcf7 textarea,.wpcf7-form-control-wrap,.woocommerce .product-fix a.compare:before,.woocommerce .product-fix a.yith-wcqv-button:before,.widget-area .search-form label,.widget-area .search-form .search-field,.reply,.product-fix .product-hover,.product-fix .product-image .background-overlay,.woocommerce div.product form.cart .variations td,.woocommerce div.product form.cart .variations td.label,.woocommerce div.product form.cart .variations select,.sku_wrapper,.posted_in,.primary-menu ul li a{
 	width: 100%;
 }
 .position-relative{
@@ -126,41 +126,37 @@ p{
 /********************************************************
     ## Header
 ********************************************************/
-.header-top {
-	background: #f8f8f8;
+.header-top{
+	padding: 15px 0;
 }
-.header-top .header-social a{
-	padding: 0 7px 0 0;
-}
-.header-middle .mini-cart{
-	margin-top: 25px;
-}
-.header-bottom{
-	background: #f8f8f8;
-}
-.header-bottom .navbar-default{
+.navbar-default{
 	margin-bottom: 0;
 	height: inherit;
 	background: transparent;
 	border: 0;
+	min-height: inherit;
 }
-.sticky .header-middle,.sticky .header-top{
-	display: none;
-}
-header,.sticky .header-bottom{
-	transition: all 0.4s ease;
-}
-.sticky .header-bottom{
+.header{
 	top: 0;
 	position: fixed;
 	width: 100%;
 	z-index: 10;
 }
+.sticky .header-top,.header{
+	transition: all 0.4s ease;
+}
+.sticky .header-top{
+	padding: 10px 0;
+}
 /********************************************************
     ## Menu, Slider
 ********************************************************/
 .primary-menu ul li a{
-	padding: 15px 30px 15px 0;
+	padding: 15px;
+	display: inline-block;
+}
+.primary-menu ul .mini-cart a{
+	padding-right: 0;
 }
 .main-slider{
 	margin: 0 !important;
