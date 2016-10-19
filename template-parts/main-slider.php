@@ -18,7 +18,7 @@ $slider_query = new WP_Query( $slider_var );
             <div data-thumb="<?php if ( has_post_thumbnail() ) {  the_post_thumbnail_url('thumbnail'); } ?>" data-src="<?php if ( has_post_thumbnail() ) {  the_post_thumbnail_url(); } ?>">
                 <div class="slider-inner text-center">
                     <div class="slider-wrap">
-                        <h2 class="text-uppercase animated fadeInDown"><?php the_title(); ?></h2>
+                        <h1 class="text-uppercase animated fadeInDown"><?php the_title(); ?></h1>
                         <?php if($heading != '') : ?>
                         <h2 class="text-uppercase animated fadeIn"><?php echo $heading;?></h2>
                         <?php endif; ?>
@@ -26,7 +26,7 @@ $slider_query = new WP_Query( $slider_var );
                             <p class=" animated fadeInUp"><?php echo $text; ?></p>
                         <?php endif; ?>
                         <?php if($link != '' ||  $link_title != ''): ?>
-                            <a href="<?php echo $link;?>" class="btn btn-default text-uppercase  animated fadeInDown"><?php echo $link_title;?></a>
+                            <a href="<?php echo $link;?>" class="btn btn-default btn-lg text-uppercase  animated fadeInDown"><?php echo $link_title;?></a>
                         <?php endif; ?>
                     </div>
                 </div>

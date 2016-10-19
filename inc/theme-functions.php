@@ -52,8 +52,9 @@ add_action( 'themetim_header_social', 'header_social' );
 function header_account(){
     if(get_theme_mod('top_header_account_enable', '1')){
         $login_register =  get_permalink(get_theme_mod('header_login_register'));
+        $header_myaccount =  get_permalink(get_theme_mod('header_myaccount'));
         if(is_user_logged_in()){
-            echo '<li class="padding-null"><a href="'.$login_register.'">'.get_theme_mod('top_header_account').'</a></li><li class="padding-null"><a href="'.wp_logout_url().'">Logout</a></li>';
+            echo '<li class="padding-null"><a href="'.$header_myaccount.'">'.get_theme_mod('top_header_account','Account').'</a></li><li class="padding-null"><a href="'.wp_logout_url().'">Logout</a></li>';
         }else{
             echo '<li class="padding-null"><a href="'.$login_register.'">Login</a></li><li class="padding-null"><a href="'.$login_register.'">Register</a></li>';
         }

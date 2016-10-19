@@ -51,6 +51,9 @@ p{
 .margin-null,.header-social,.header-info,.woocommerce .products ul, .woocommerce ul.products,.footer-social,.newsletter h3,.woocommerce div.product .woocommerce-tabs .panel,.woocommerce div.product div.images, .woocommerce div.product div.summary,.woocommerce .woocommerce-breadcrumb,.woocommerce ul.products li.product .button{
 	margin: 0;
 }
+.admin-bar .header{
+	top: auto;
+}
 .badge{
 	padding: 0;
 	border-radius: 50%;
@@ -159,7 +162,7 @@ p{
 	padding-right: 0;
 }
 .main-slider{
-	margin: 0 !important;
+	margin: -7px 0 0 0 !important;
 }
 .camera_wrap .camera_pag .camera_pag_ul{
 	text-align: center;
@@ -225,6 +228,24 @@ p{
 }
 .owl-next{
 	float: right;
+}
+.slider-wrap h1{
+	font-size: 80px;
+	color: #fff;
+}
+.slider-wrap p{
+	color: #fff;
+	font-size: 16px;
+	padding: 30px;
+}
+.main-slider .camera_target_content:after {
+	content: '';
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 /********************************************************
     ## Home

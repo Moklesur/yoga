@@ -364,6 +364,21 @@ function themetim_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_setting(
+		'header_myaccount'
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Pages_Control(
+			$wp_customize,
+			'header_myaccount',
+			array(
+				'label'    => 'My Account Page',
+				'settings' => 'header_myaccount',
+				'section'  => 'title_tagline'
+			)
+		)
+	);
+
+	$wp_customize->add_setting(
 		'header_login_register'
 	);
 	$wp_customize->add_control(
