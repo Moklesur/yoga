@@ -28,7 +28,7 @@ function themetim_typography_color($color) {
     $color .= "h1, h2, h3, h4, h5, h6 { color:" . esc_attr($heading_color) . ";font-family: ". esc_attr(str_replace('+', ' ', $heading_font_family)) ."} ";
 
     $link_color = get_theme_mod( 'link_color', '#000' );
-    $color .= "a,.header-bottom .navbar-default .active a:hover,.header-bottom .navbar-default li> a,.woocommerce div.product .product_title,.woocommerce div.product p.price, .woocommerce div.product span.price,.woocommerce div.product form.cart .variations td.label,.navbar-default .navbar-nav>li>a { color:" . esc_attr($link_color) . "} ";
+    $color .= ".woocommerce ul.products li.product .price,a,.header-bottom .navbar-default .active a:hover,.header-bottom .navbar-default li> a,.woocommerce div.product .product_title,.woocommerce div.product p.price, .woocommerce div.product span.price,.woocommerce div.product form.cart .variations td.label,.navbar-default .navbar-nav>li>a { color:" . esc_attr($link_color) . "} ";
 
     $link_hover_color = get_theme_mod( 'link_hover_color', '#555' );
     $color .= "a:hover,.header-bottom .navbar-default .active a,.header-bottom .navbar-default .active a:hover,.header-bottom .navbar-default li> a:hover ,.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{ color:" . esc_attr($link_hover_color) . "} ";

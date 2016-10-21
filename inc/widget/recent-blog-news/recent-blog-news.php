@@ -34,7 +34,7 @@ class RecentBlogNews_Widget extends WP_Widget {
         }
         $title = '';
         if ( ! empty( $instance['title'] ) ) {
-            $title = '<h3 class="page-header margin-null">'. apply_filters( 'widget_title', $instance['title'] ).'</h3>';
+            $title = '<h2 class="page-header margin-null">'. apply_filters( 'widget_title', $instance['title'] ).'</h2>';
         }
 
         $query_latest_blog = new WP_Query( array(
@@ -44,7 +44,7 @@ class RecentBlogNews_Widget extends WP_Widget {
 
         ?>
         <div class="latest-blog-post row">
-            <div class="col-md-12 col-sm-12 col-xs-12 text-center">
+            <div class="col-md-12 col-sm-12 col-xs-12">
                 <?php echo $title;?>
             </div>
             <div class="latest-blog-post-widget">
