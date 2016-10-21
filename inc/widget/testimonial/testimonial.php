@@ -24,7 +24,7 @@ class TestimonialSlider_Widget extends WP_Widget {
     public function widget( $args, $instance ) {
         $title = '';
         if ( ! empty( $instance['title'] ) ) {
-            $title = '<h2 class="page-header">'. apply_filters( 'widget_title', $instance['title'] ).'</h2>';
+            $title = '<h2 class="page-header margin-bottom-30">'. apply_filters( 'widget_title', $instance['title'] ).'</h2>';
         }
         ?>
         <?php
@@ -48,7 +48,7 @@ class TestimonialSlider_Widget extends WP_Widget {
                                    </div>
                                <?php } ?>
                                <div class="testimonial-text margin-bottom-30">
-                                   <h3 class="margin-top-40 margin-bottom-20"><?php the_title(); ?></h3>
+                                   <h3 class="margin-top-40 margin-bottom-20 text-capitalize"><?php the_title(); ?></h3>
                                    <?php the_content(); ?>
                                </div>
                            </div>

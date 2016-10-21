@@ -45,15 +45,15 @@ class Portfolio_Widget extends WP_Widget {
                     $text = get_post_meta( get_the_ID(), 'portfolio-text', true );
                     $link_title = get_post_meta( get_the_ID(), 'portfolio-link-title', true );
                     $link = get_post_meta( get_the_ID(), 'portfolio-link', true ); ?>
-                    <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="col-md-4 col-sm-4 col-xs-12 text-center">
                         <?php if ( has_post_thumbnail() ) { ?>
                             <div class="portfolio-thumb">
                                 <img src="<?php the_post_thumbnail_url(); ?>" alt="" class="img-responsive center-block">
                             </div>
                         <?php } ?>
-                        <h2 class="text-uppercase "><?php the_title(); ?></h2>
+                        <h4 class="text-uppercase "><?php the_title(); ?></h4>
                         <?php if($heading != '') : ?>
-                            <h4 class="text-uppercase"><?php echo $heading;?></h4>
+                            <h5 class="text-uppercase"><?php echo $heading;?></h5>
                         <?php endif; ?>
                         <?php if($text != ''): ?>
                             <p><?php echo $text; ?></p>
