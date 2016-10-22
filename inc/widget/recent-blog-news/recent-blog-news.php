@@ -51,34 +51,31 @@ class RecentBlogNews_Widget extends WP_Widget {
                 <?php
                 if ($query_latest_blog->have_posts()) :
                     while ( $query_latest_blog->have_posts() ) : $query_latest_blog->the_post(); ?>
-                        <div class="col-md-4 col-sm-6 col-xs-12 margin-top-30">
-                            <?php the_title( sprintf( '<h4 class="entry-title text-capitalize margin-null"><a href="%s">', esc_url( get_permalink() ) ), '</a></h4>' );
-                            if ( 'post' === get_post_type() ) : ?>
-                                <?php if($date_time_enable == '1') : ?>
-                                <div class="entry-meta margin-bottom-20 margin-top-10">
-                                    <?php themetim_posted_on(); ?>
-                                </div><!-- .entry-meta -->
+                        <div class="col-md-4 col-sm-6 col-xs-12 margin-top-30 overflow">
+                            <div class="latest-blog position-relative">
+                                <?php the_title( sprintf( '<h4 class="entry-title text-capitalize margin-null"><a href="%s">', esc_url( get_permalink() ) ), '</a></h4>' );
+                                if ( 'post' === get_post_type() ) : ?>
+                                    <?php if($date_time_enable == '1') : ?>
+                                        <div class="entry-meta margin-bottom-20 margin-top-10">
+                                            <?php themetim_posted_on(); ?>
+                                        </div><!-- .entry-meta -->
                                     <?php endif; ?>
+                                    <?php
+                                endif; ?>
+                                <?php if ( has_post_thumbnail() ) : ?>
+                                    <div class="entry-thumb margin-top-20 overflow latest-blog-thumb position-relative">
+                                        <a href="<?php the_permalink(); ?>">
+                                            <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-responsive" alt="" />
+                                        </a>
+                                    </div>
+                                <?php endif; ?>
                                 <?php
-                            endif; ?>
-                            <?php if ( has_post_thumbnail() ) : ?>
-                                <div class="entry-thumb">
-                                    <a href="<?php the_permalink(); ?>">
-                                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="img-responsive margin-top-20 margin-bottom-20" alt="" />
-                                    </a>
-                                </div>
-                            <?php endif; ?>
-                            <div class="entry-summary"><?php the_excerpt(); ?></div>
-                            <?php if(!is_single()) : ?>
-                                <div class="pull-left margin-top-10">
-                                    <a href="<?php the_permalink(); ?>" class="btn btn-default">Read More</a>
-                                </div>
-                            <?php endif;
-                            if ($latest_news_social_enable == '1') : ?>
-                                <div class="pull-right margin-top-10">
-                                    <?php themetim_social_sharing(); ?>
-                                </div>
-                            <?php endif; ?>
+                                if ($latest_news_social_enable == '1') : ?>
+                                    <div class="latest-blog-share full-width text-center">
+                                        <?php themetim_social_sharing(); ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
                         </div>
 
                     <?php endwhile;

@@ -103,7 +103,7 @@ jQuery(function(){
             outClass: 'fade-out',
             inDuration: 1500,
             outDuration: 800,
-            linkElement: '.menu-item a,li>a,h2 a,h1 a,.btn',
+            linkElement: '.addclassthemetim',
             // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
             loading: true,
             loadingParentElement: 'body', //animsition wrapper element

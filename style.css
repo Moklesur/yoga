@@ -3,7 +3,7 @@ Theme Name: Yoga Responsive WooCommerce WordPress Theme
 Theme URI: http://themetim.com/
 Author: ThemeTim
 Author URI: http://themetim.com/
-Description: Description
+Description: 
 Version: 1.0
 Text Domain: themetim
 Tags:
@@ -15,7 +15,7 @@ Tags:
 body{
 	font-weight: 400;
 }
-a,.btn,input,button,.woocommerce .product-fix .compare,.woocommerce .product-fix .yith-wcqv-button,.woocommerce ul.products li.product .thumbs{
+a,.btn,input,button,.woocommerce .product-fix .compare,.woocommerce .product-fix .yith-wcqv-button,.woocommerce ul.products li.product .thumbs,.latest-blog .latest-blog-share,.latest-blog-share li a{
 	-webkit-transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	-ms-transition: all .3s ease-in-out;
@@ -118,10 +118,10 @@ p,.textwidget{
 .woocommerce ul.products li.product .price del,.margin-right-10{
 	margin-right: 10px;
 }
-.display-inline-b,.header-top .header-social a,.footer-social a,.footer-middle li a,.woocommerce ul.products li.product .price del,.owl-nav>div,.wpcf7-form-control-wrap{
+.display-inline-b,.header-top .header-social a,.footer-social a,.footer-middle li a,.woocommerce ul.products li.product .price del,.owl-nav>div,.wpcf7-form-control-wrap,.latest-blog-share li a {
 	display: inline-block;
 }
-.overflow,.woocommerce ul.products li.product .price{
+.overflow{
 	overflow: hidden;
 }
 .full-width,.footer-middle li a,.woocommerce .related .products .product-fix,.blog-article .calendar_wrap,.woocommerce-Reviews input,.wpcf7 label, .wpcf7 input, .wpcf7 select, .wpcf7 textarea,.wpcf7-form-control-wrap,.woocommerce .product-fix a.compare:before,.woocommerce .product-fix a.yith-wcqv-button:before,.widget-area .search-form label,.widget-area .search-form .search-field,.reply,.product-fix .product-hover,.product-fix .product-image .background-overlay,.woocommerce div.product form.cart .variations td,.woocommerce div.product form.cart .variations td.label,.woocommerce div.product form.cart .variations select,.sku_wrapper,.posted_in,.primary-menu ul li a{
@@ -270,6 +270,45 @@ p,.textwidget{
 }
 .testimonial .carousel-indicators .active{
 	background: #ddd;
+}
+.testimonial-content{
+	max-width: 850px;
+}
+.parallax-text h1{
+	font-size: 80px;
+	text-transform: uppercase;
+}
+.latest-blog-share{
+	position: absolute;
+	left: 0;
+	bottom: 25%;
+	opacity: 0;
+}
+.latest-blog:hover .latest-blog-share{
+	opacity: 1;
+}
+.latest-blog-thumb:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+}
+.latest-blog-share li a {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid;
+	border-radius: 50%;
+	position: relative;
+	z-index: 1;
+	color: #eee;
+}
+.latest-blog-share li a:hover{
+	color: #fff;
+	background: #000;
+	border-color: #000;
 }
 /********************************************************
     ## Contact Form

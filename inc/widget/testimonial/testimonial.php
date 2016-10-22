@@ -49,7 +49,9 @@ class TestimonialSlider_Widget extends WP_Widget {
                                <?php } ?>
                                <div class="testimonial-text margin-bottom-30">
                                    <h3 class="margin-top-40 margin-bottom-20 text-capitalize"><?php the_title(); ?></h3>
-                                   <?php the_content(); ?>
+                                   <div class="testimonial-content center-block">
+                                       <?php the_content(); ?>
+                                   </div>
                                </div>
                            </div>
                        <?php endwhile; ?>
