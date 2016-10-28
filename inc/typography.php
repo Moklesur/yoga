@@ -43,7 +43,7 @@ function themetim_typography_color($color) {
     /*
      * Footer Section
      */
-    $footer_bg_color = get_theme_mod( 'footer_bg_color', '#ddd' );
+    $footer_bg_color = get_theme_mod( 'footer_bg_color', '#fff' );
     $footer_text_color = get_theme_mod( 'footer_text_color', '#000' );
     $color .= ".footer-main { background:" . esc_attr($footer_bg_color) . "; color: ". esc_attr($footer_text_color) .";} ";
 

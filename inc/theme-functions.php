@@ -70,6 +70,7 @@ add_action( 'themetim_header_account', 'header_account' );
 function footer_social() {
     if(get_theme_mod('social_footer_enable','1')) :
         ?>
+        <h4>Social Link</h4>
         <ul class="list-inline footer-social">
             <?php
             if(get_theme_mod('footer_fb','1')) {
@@ -107,12 +108,11 @@ add_action( 'themetim_footer_social', 'footer_social' );
  */
 function footer_newsletter(){
     ?>
-    <form class="form-inline margin-top-xs-20" action="#" method="post" target="_blank">
-        <div class="form-group">
-            <h3 class="margin-clear padding-clear pull-left">Newsletter</h3>
-            <input type="email" class="form-control" name="newsletter-email" id="newsletter-email" placeholder="info@yoursite.com" required="">
-            <button type="submit" class="btn btn-primary">Subscribe</button>
-        </div>
+    <h3 class="margin-null margin-bottom-30"><?php echo get_theme_mod('top_footer_newsletter_titleNewsletter','Newsletter');?></h3>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br/> Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+    <form class="margin-top-30 margin-top-xs-20 newsletter" action="<?php echo get_theme_mod('top_footer_newsletter_url','https://www.yourmailchimpurl.com');?>" method="post" target="_blank">
+        <input type="email" class="form-control" name="newsletter-email" id="newsletter-email" placeholder="info@yoursite.com" required="">
+        <button type="submit" class="btn btn-default margin-top-20 text-uppercase">Subscribe</button>
     </form>
     <?php
 }
@@ -186,8 +186,8 @@ add_action( 'themetim_middle_footer_nav_3', 'middle_footer_nav_3' );
  */
 function bottom_footer_copyright(){
     ?>
-    <div class="col-md-6 col-sm-6 col-xs-12 site-info">
-        <p><?php echo get_theme_mod('bottom_footer_copyright','© 2016 ThemeTim. All Rights Reserved.'); ?></p>
+    <div class="col-md-12 col-sm-12 col-xs-12 site-info">
+        <p><?php echo get_theme_mod('bottom_footer_copyright','© ThemeTim. All Rights Reserved.'); ?></p>
     </div>
     <?php
 }

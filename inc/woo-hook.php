@@ -67,10 +67,10 @@ function custom_add_product_description ($category) {
     $slug       =    $category->slug;
     $cat_url = get_term_link( $slug, 'product_cat' );
 
-    echo '<h2><a href='.$cat_url.'>'.$prod_term->name.'</a></h2>';
-    echo '<h4>'.$category->count.' Product</h4>';
+    echo '<h4><a href='.$cat_url.'>'.$prod_term->name.'</a></h4>';
+    echo '<h5>'.$category->count.' Product</h5>';
     echo '<p>'.substr( $description,0,110 ).'</p>';
-    echo "<a href='$cat_url' class='btn btn-default text-uppercase'>See Collections</a>";
+    echo "<a href='$cat_url' class='btn btn-default text-uppercase'>See Category</a>";
 }
 
 /**
@@ -187,3 +187,25 @@ function bbloomer_prev_next_product(){
  */
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
+
+/**
+ * Breadcrumbs
+ * Remove hook
+ * Modify Breadcrumbs
+ */
+add_action( 'init', 'themetim_woo_breadcrumbs' );
+function themetim_woo_breadcrumbs() {
+    remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+}
+
+add_filter( 'woocommerce_breadcrumb_defaults', 'themetim_modify_woocommerce_breadcrumbs' );
+function themetim_modify_woocommerce_breadcrumbs() {
+    return array(
+        'delimiter'   => '',
+        'wrap_before' => '<ul class="breadcrumb margin-null">',
+        'wrap_after'  => '</ul>',
+        'before'      => '<li>',
+        'after'       => '</li>',
+        'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
+    );
+}

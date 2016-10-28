@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header( 'shop' ); ?>
-<main>
+<main class="padding-gap-1">
 	<section>
 		<div class='container'>
 			<div class='row'>

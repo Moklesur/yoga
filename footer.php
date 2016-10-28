@@ -13,22 +13,18 @@
 
 <footer class="footer-main">
 	<!--------------- Footer Top ---------------->
-	<section class="footer-top">
+	<section class="footer-top padding-gap-1 padding-gap-2 text-center">
 		<div class="container">
 			<div class="row">
 				<!--------------- Footer Social ---------------->
-				<div class="col-md-6 col-sm-6 col-xs-12">
-					<?php do_action('themetim_footer_social'); ?>
-				</div>
-				<!--------------- Footer Newsletter ---------------->
-				<div class="col-md-6 col-sm-6 col-xs-12 newsletter text-right">
-					<?php do_action('themetim_footer_newsletter');?>
+				<div class="col-md-12 col-sm-12 col-xs-12">
+					<?php do_action('themetim_footer_newsletter'); ?>
 				</div>
 			</div>
 		</div>
 	</section>
 	<!--------------- Footer Middle ---------------->
-	<section class="footer-middle">
+	<section class="footer-middle margin-top-40">
         <div class="container">
             <div class="row">
 				<?php
@@ -41,25 +37,22 @@
 				if(get_theme_mod('middle_footer_nav_2_enable','1')) :
 					do_action('themetim_middle_footer_nav_2');
 				 endif;
-				if(get_theme_mod('middle_footer_nav_3_enable','1')) :
-					do_action('themetim_middle_footer_nav_3');
-				endif; ?>
+				 ?>
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<?php do_action('themetim_footer_social'); ?>
+				</div>
 			</div>
 		</div>
 	</section>
 	<!--------------- Footer bottom ---------------->
-	<section class="footer-bottom">
+	<section class="footer-bottom text-center padding-bottom-10">
 		<div class="container">
 			<div class="row">
 				<?php
 				if(get_theme_mod('bottom_footer_copyright_enable','1')) :
 					do_action('themetim_bottom_footer_copyright');
 				endif;
-				if(get_theme_mod('bottom_footer_nav_enable','1')) :
-					do_action('themetim_bottom_footer_nav');
-				endif;
 				?>
-
 			</div>
 		</div>
 	</section>
