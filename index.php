@@ -15,7 +15,7 @@
 get_header(); ?>
 
 	<main class="home-page woocommerce">
-		<section class="banner">
+		<section>
 			<div class="container">
 				<div class="row">
 					<?php if (get_theme_mod('blog_sidebar_enable','1') ) : ?>
@@ -27,7 +27,7 @@ get_header(); ?>
 							if ( have_posts() ) :
 								if ( is_home() && ! is_front_page() ) : ?>
 									<header>
-										<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+										<h1 class="page-header screen-reader-text"><?php single_post_title(); ?></h1>
 									</header>
 									<?php
 								endif;

@@ -11,7 +11,7 @@
 
 ?>
 
-<footer class="footer-main">
+<footer class="footer-main padding-gap-1">
 	<!--------------- Footer Top ---------------->
 	<section class="footer-top padding-gap-1 padding-gap-2 text-center">
 		<div class="container">
@@ -57,35 +57,9 @@
 		</div>
 	</section>
 </footer>
+</div>
 
 <?php wp_footer(); ?>
-
-<script>
-	var $ = jQuery;
-	$(function() {
-		/***************************************************************************************
-		 * Mega Menu
-		 ***************************************************************************************/
-		window.prettyPrint && prettyPrint();
-		$(document).on('click', '.primary-menu .xs-dropdown-menu', function(e) {
-			e.stopPropagation();
-		});
-		$('.primary-menu .xs-dropdown-menu').parent().hover(function() {
-			var menu = $(this).find("ul");
-			var menupos = $(menu).offset();
-			if (menupos.left + menu.width() > $(window).width()) {
-				var newpos = -$(menu).width();
-				menu.css({ left: newpos });
-			}
-		});
-		$(document).on('click', '.primary-menu .xs-angle-down', function(e) {
-			e.preventDefault();
-			$(this).parents('.xs-dropdown').find('.xs-dropdown-menu').toggleClass('active');
-		});
-	});
-</script>
-
-
 
 </body>
 </html>

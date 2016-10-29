@@ -54,9 +54,9 @@ function header_account(){
         $login_register =  get_permalink(get_theme_mod('header_login_register'));
         $header_myaccount =  get_permalink(get_theme_mod('header_myaccount'));
         if(is_user_logged_in()){
-            echo '<li class="padding-null"><a href="'.$header_myaccount.'">'.get_theme_mod('top_header_account','Account').'</a></li><li class="padding-null"><a href="'.wp_logout_url().'">Logout</a></li>';
+            echo '<li class="padding-null"><a href="'.$header_myaccount.'"><span class="hidden-xs">'.get_theme_mod('top_header_account','Account').'</span><i class="fa fa-user visible-xs"></i></a></li><li class="padding-null"><a href="'.wp_logout_url().'"><span class="hidden-xs">Logout</span><i class="fa fa-sign-out visible-xs"></i></a></li>';
         }else{
-            echo '<li class="padding-null"><a href="'.$login_register.'">Login</a></li><li class="padding-null"><a href="'.$login_register.'">Register</a></li>';
+            echo '<li class="padding-null"><a href="'.$login_register.'"><span class="hidden-xs">Login</span><i class="fa fa-sign-in visible-xs"></i></a></li><li class="padding-null"><a href="'.$login_register.'"><span class="hidden-xs">Register</span><i class="fa fa-lock visible-xs"></i></a></li>';
         }
     }
 }

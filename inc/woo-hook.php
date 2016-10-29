@@ -209,3 +209,10 @@ function themetim_modify_woocommerce_breadcrumbs() {
         'home'        => _x( 'Home', 'breadcrumb', 'woocommerce' ),
     );
 }
+
+/**
+ * ThemeTim
+ * Changed product limit of shop page 9 to 12
+ */
+
+add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 20 );

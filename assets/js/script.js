@@ -30,12 +30,32 @@ jQuery(function(){
         jQuery('.related .products').owlCarousel({
             loop:true,
             margin:30,
-            responsiveClass:true,
             items:4,
             autoplay:false,
             animateOut: true,
             nav: true,
-            navText: ["<span><i class='fa fa-angle-left fa-2x'></i></span>","<span><i class='fa fa-angle-right  fa-2x'></i></span>"]
+            navText: ["<span><i class='fa fa-angle-left fa-2x'></i></span>","<span><i class='fa fa-angle-right  fa-2x'></i></span>"],
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:1
+                },
+                480:{
+                    items:1
+                },
+                667:{
+                    items:2
+                },
+                768:{
+                    items:3
+                },
+                1024:{
+                    items:4
+                },
+                1366:{
+                    items:4
+                }
+            }
 
         });
     }
@@ -43,11 +63,31 @@ jQuery(function(){
         jQuery('.images .thumbnails').owlCarousel({
             loop:true,
             margin:10,
-            responsiveClass:true,
             items:4,
             autoplay:true,
             nav: true,
-            navText: ["<span><i class='fa fa-angle-left fa-2x'></i></span>","<span><i class='fa fa-angle-right  fa-2x'></i></span>"]
+            navText: ["<span><i class='fa fa-angle-left fa-2x'></i></span>","<span><i class='fa fa-angle-right  fa-2x'></i></span>"],
+            responsiveClass:true,
+            responsive:{
+                0:{
+                    items:2
+                },
+                480:{
+                    items:3
+                },
+                667:{
+                    items:4
+                },
+                768:{
+                    items:4
+                },
+                1024:{
+                    items:4
+                },
+                1366:{
+                    items:4
+                }
+            }
         });
     }
     /*******************************************************************************
@@ -88,10 +128,10 @@ jQuery(function(){
     var head = jQuery( 'header' ).height();
     jQuery(window).scroll(function() {
         if (jQuery(this).scrollTop() > head){
-            jQuery('header').addClass("sticky");
+            jQuery('.header').addClass("sticky");
         }
         else{
-            jQuery('header').removeClass("sticky");
+            jQuery('.header').removeClass("sticky");
         }
     });
     /*******************************************************************************
@@ -99,11 +139,11 @@ jQuery(function(){
      *******************************************************************************/
     if(jQuery('.animsition').length){
         jQuery(".animsition").animsition({
-            inClass: 'fade-in',
-            outClass: 'fade-out',
+            inClass: 'fade-in-up-sm',
+            outClass: 'fade-out-up-sm',
             inDuration: 1500,
             outDuration: 800,
-            linkElement: '.addclassthemetim',
+            linkElement: 'header a',
             // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
             loading: true,
             loadingParentElement: 'body', //animsition wrapper element
@@ -130,6 +170,28 @@ jQuery(function(){
         ease: 'swing',
         target: jQuery('body'),
         container: jQuery(window)
-    })
+    });
+
+    /*******************************************************************************
+     * Menu
+     *******************************************************************************/
+
+    var $ = jQuery;
+    window.prettyPrint && prettyPrint();
+    $(document).on('click', '.primary-menu .xs-dropdown-menu', function(e) {
+        e.stopPropagation();
+    });
+    $('.primary-menu .xs-dropdown-menu').parent().hover(function() {
+        var menu = $(this).find("ul");
+        var menupos = $(menu).offset();
+        if (menupos.left + menu.width() > $(window).width()) {
+            var newpos = -$(menu).width();
+            menu.css({ left: newpos });
+        }
+    });
+    $(document).on('click', '.primary-menu .xs-angle-down', function(e) {
+        e.preventDefault();
+        $(this).parents('.xs-dropdown').find('.xs-dropdown-menu').toggleClass('active');
+    });
 
 });

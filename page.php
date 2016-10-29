@@ -18,7 +18,7 @@ get_header(); ?>
 		<?php if(is_front_page()) :
 			require get_template_directory() . '/template-parts/main-slider.php';
 		 endif; ?>
-		<section class="banner">
+		<section>
 			<div class="container">
 				<div class="row">
 					<div class="col-md-9 col-sm-8 col-xs-12 padding-gap-1 padding-gap-4">

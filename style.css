@@ -3,10 +3,10 @@ Theme Name: Yoga Responsive WooCommerce WordPress Theme
 Theme URI: http://themetim.com/
 Author: ThemeTim
 Author URI: http://themetim.com/
-Description:
+Description: Yoga is responsive woocommerce integrated theme which is designed subtle and prevailing. Ideal for featuring yoga products and techniques. It has been optimized for best practice SEO with visual page builder integration.
 Version: 1.0
 Text Domain: themetim
-Tags:
+Tags: fully customizable, visual page builder, mobile responsive, responsive, grid, bootstrap, custom menu, full width, custom sidebar, ecommerce, blog, modern design, featured image, custom background, news and promotions, social,woocommerce
 */
 
 /********************************************************
@@ -29,17 +29,17 @@ img {
 	max-width: 100%;
 	height: auto;
 }
-a,.btn,.woocommerce ul.products li.product .button,.form-control,.woocommerce .cart .button, .woocommerce .cart input.button, .woocommerce input.button:disabled, .woocommerce input.button:disabled[disabled], .woocommerce-cart table.cart td.actions .coupon .input-text,.select2-container .select2-choice, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button,.woocommerce table.shop_table,.woocommerce #payment #place_order,#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment,.navbar-default .navbar-toggle{
+a,.btn,.woocommerce ul.products li.product .button,.form-control,.woocommerce .cart .button, .woocommerce .cart input.button, .woocommerce input.button:disabled, .woocommerce input.button:disabled[disabled], .woocommerce-cart table.cart td.actions .coupon .input-text,.select2-container .select2-choice, .woocommerce-cart .wc-proceed-to-checkout a.checkout-button,.woocommerce table.shop_table,.woocommerce #payment #place_order,#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment,.navbar-default .navbar-toggle,.woocommerce form.checkout_coupon, .woocommerce form.login, .woocommerce form.register{
 	border-radius: 0;
 }
 h1, h2, h3, h4, h5, h6{
 	letter-spacing: 2px;
 	font-weight: 700;
 }
-a,p,.woocommerce input.button,.woocommerce-cart .cart-collaterals .cart_totals tr th,.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,.woocommerce .cart th,.woocommerce table.shop_table th,.textwidget{
+a,p,.woocommerce input.button,.woocommerce-cart .cart-collaterals .cart_totals tr th,.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,.woocommerce .cart th,.woocommerce table.shop_table th,.textwidget,.woocommerce-Address address {
 	letter-spacing: 1px;
 }
-p,.textwidget{
+p,.textwidget,.woocommerce-Address address {
 	line-height: 29px;
 }
 .panel,.navbar-default .navbar-collapse, .navbar-default .navbar-form,.navbar-default .navbar-collapse, .navbar-default .navbar-form{
@@ -88,6 +88,7 @@ p,.textwidget{
 	line-height: 22px;
 	font-size: 10px;
 	font-weight: normal;
+	background: #f98a6e;
 }
 .padding-null{
 	padding: 0 !important;
@@ -95,7 +96,7 @@ p,.textwidget{
 .padding-gap-1,.parallax,.footer{
 	padding-top: 90px;
 }
-.padding-gap-2,.up-sells,.related,.woocommerce-tabs,.woocommerce div.product div.images, .woocommerce div.product div.summary{
+.padding-gap-2,.up-sells,.woocommerce-tabs,.woocommerce div.product div.images, .woocommerce div.product div.summary{
 	padding-bottom:90px;
 }
 .padding-gap-3,.woocommerce-pagination{
@@ -155,6 +156,9 @@ p,.textwidget{
 /********************************************************
     ## Header
 ********************************************************/
+.header.sticky{
+	background: rgba(255,255,255,0.5);
+}
 .header-top{
 	padding: 15px 0;
 }
@@ -281,14 +285,14 @@ p,.textwidget{
 	text-align: center;
 }
 .testimonial .carousel-indicators li{
-	border-color: #ddd;
+	border-color: #fa8b6e;
 	width: 20px;
 	height: 20px;
 	border-radius: 100%;
 	margin: 0 3px;
 }
 .testimonial .carousel-indicators .active{
-	background: #ddd;
+	background: #fa8b6e;
 }
 .testimonial-content{
 	max-width: 850px;
@@ -303,16 +307,17 @@ p,.textwidget{
 	bottom: 25%;
 	opacity: 0;
 }
-.latest-blog:hover .latest-blog-share{
+.latest-blog:hover .latest-blog-share,.latest-blog:hover .latest-blog-thumb:after{
 	opacity: 1;
 }
 .latest-blog-thumb:after{
+	opacity: 0;
 	content: '';
 	position: absolute;
 	top: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0,0,0,.5);
+	background: rgba(0,0,0,.4);
 }
 .latest-blog-share li a {
 	width: 40px;
@@ -322,12 +327,11 @@ p,.textwidget{
 	border-radius: 50%;
 	position: relative;
 	z-index: 1;
-	color: #eee;
 }
 .latest-blog-share li a:hover{
 	color: #fff;
-	background: #000;
-	border-color: #000;
+	background: #fa8b6e;
+	border-color: #fa8b6e;
 }
 /********************************************************
     ## Contact Form
@@ -340,6 +344,7 @@ p,.textwidget{
 	padding: 2px 25px;
 	height: inherit;
 	letter-spacing: 1px;
+	border: 1px solid;
 }
 /********************************************************
     ## Blog
@@ -349,20 +354,31 @@ p,.textwidget{
 	list-style: none;
 }
 .widget-area ul li{
-	padding-bottom: 10px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 15px;
 }
 .widget-area ul li:last-child{
 	padding-bottom: 0;
+	margin-bottom: 0;
+	border-bottom: 0;
 }
 .widget-area section{
-	background: #f9f9f9;
 	padding: 15px;
 	margin-bottom: 30px;
 }
 .widget-area section .widget-title{
-	border-bottom: 1px solid #ddd;
 	padding-bottom: 10px;
 	margin-bottom: 20px;
+}
+.widget-area section .widget-title:after {
+	content: '';
+	width: 35px;
+	border: 1px solid #fa8b6e;
+	display: block;
+	margin-top: 10px;
+	z-index: 1;
+	position: relative;
 }
 .widget-area .search-form .search-field{
 	border-radius:0 ;
@@ -400,6 +416,7 @@ p,.textwidget{
 	user-select: none;
 	background-image: none;
 	border: 1px solid transparent;
+	margin-top: 10px;
 }
 .widget-area .search-form .screen-reader-text{
 	display: none;
@@ -445,6 +462,19 @@ p,.textwidget{
 /********************************************************
     ## WooCommerce
 ********************************************************/
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button{
+	font-weight: inherit;
+}
+.cart-wishlist-compare {
+	opacity: 0;
+	position: absolute;
+	width: 100%;
+	TOP: 40%;
+	z-index: 1;
+}
+.product-fix:hover .cart-wishlist-compare {
+	opacity: 1;
+}
 .woocommerce div.product .product_title{
 	text-transform: capitalize;
 	font-size: 24px;
@@ -453,15 +483,15 @@ p,.textwidget{
 	width: 31.5%;
 }
 .product-fix:hover .product-hover {
-	top: 23%;
-	height: inherit;
-	z-index: 2;
+	opacity: 1;
 }
 .product-fix .product-hover {
-	height: 0;
-	top: 0;
+	height: inherit;
+	top: 23%;
 	position: absolute;
 	overflow: hidden;
+	z-index: 2;
+	opacity: 0;
 }
 .product-fix .product-image .background-overlay {
 	background: transparent;
@@ -470,7 +500,7 @@ p,.textwidget{
 }
 .product-fix:hover .background-overlay {
 	z-index: 1;
-	background: rgba(0, 0, 0, 0.61);
+	background: rgba(0, 0, 0, 0.4);
 }
 .woocommerce .products .star-rating {
 	display: block;
@@ -660,8 +690,8 @@ p,.textwidget{
 	font-weight: normal;
 	line-height: 50px;
 	letter-spacing: 1px;
-	background-color: #fff;
-	color: #000;
+	background-color: #fa8b6e;
+	color: #fff;
 }
 .woocommerce .woocommerce-ordering select {
 	padding: 6px;
@@ -694,32 +724,34 @@ p,.textwidget{
 .woocommerce ul.products li.product .price{
 	font-size: inherit;
 }
+.woocommerce-Address .edit{
+	margin-top: 25px;
+	border: 1px solid;
+	padding: 3px 12px;
+}
+.woocommerce #customer_login  h2{
+	font-size: 24px;
+}
 /********************************************************
     ## Quick View, Compare, Wishlist
 ********************************************************/
-.woocommerce .product-fix .compare{
-	float: left;
-}
-.woocommerce .product-fix .yith-wcqv-button{
-	float: right;
-}
-.woocommerce .product-fix .compare,.woocommerce .product-fix .yith-wcqv-button{
+.woocommerce .product-fix .compare,.woocommerce .product-fix .yith-wcqv-button,.woocommerce .cart-wishlist-compare a.button{
 	font-size: 0;
 	line-height: inherit;
-	visibility: hidden;
 	position: relative;
-	bottom: -35px;
+	opacity: 0;
+}
+.cart-wishlist-compare .button,.woocommerce .product-fix .compare,.woocommerce .product-fix .yith-wcqv-button,.product-fix .product-hover {
 	-webkit-transition: all 1s ease;
 	-moz-transition: all 1s ease;
 	-ms-transition: all 1s ease;
 	-o-transition: all 1s ease;
 	transition: all 1s ease;
 }
-.woocommerce .product-fix:hover .compare,.woocommerce .product-fix:hover .yith-wcqv-button{
-	visibility: visible;
-	bottom: 0;
+.woocommerce .product-fix:hover .compare,.woocommerce .product-fix:hover .yith-wcqv-button,.woocommerce .product-fix:hover .cart-wishlist-compare a.button{
+	opacity: 1;
 }
-.woocommerce .product-fix a.compare:before,.woocommerce .product-fix a.yith-wcqv-button:before{
+.woocommerce .product-fix a.compare:before,.woocommerce .product-fix a.yith-wcqv-button:before,.woocommerce .cart-wishlist-compare a.button:before,.woocommerce .cart-wishlist-compare a.added.add_to_cart_button:before,.woocommerce .cart-wishlist-compare a.loading.add_to_cart_button:before{
 	font-family: Fontawesome;
 	content: "\f079";
 	font-size: 14px;
@@ -729,6 +761,36 @@ p,.textwidget{
 }
 .woocommerce .product-fix a.yith-wcqv-button:before{
 	content: "\f002";
+}
+.woocommerce ul.products li.product .button.added{
+	margin:0 -4px 0 0;
+}
+.woocommerce .cart-wishlist-compare a.added.add_to_cart_button:before,.woocommerce .cart-wishlist-compare a.loading.add_to_cart_button:before{
+	content: "\f00c";
+	margin:0;
+	width: 100%;
+}
+.woocommerce .cart-wishlist-compare a.loading.add_to_cart_button:before{
+	content: "\f110";
+}
+.woocommerce .cart-wishlist-compare a.added.add_to_cart_button:after{
+	display: none;
+}
+.woocommerce .cart-wishlist-compare a.product_type_simple:before{
+	margin: 0;
+	width: 100%;
+	content: "\f141";
+}
+.woocommerce .cart-wishlist-compare a.add_to_cart_button:before{
+	content: "\f07a";
+	margin: 0;
+	width: 100%;
+}
+.woocommerce .cart-wishlist-compare a.product_type_variable:before{
+	content: "\f0c1";
+}
+.woocommerce-MyAccount-navigation li {
+	padding-bottom: 10px;
 }
 /********************************************************
     ## Footer

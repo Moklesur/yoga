@@ -20,7 +20,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-
+<div class="themetim-loading">
 <header class="header">
 	<!--------------- Header Top ---------------->
 	<section class="header-top text-center-xs">
@@ -29,7 +29,7 @@
 				<div class="col-md-12 col-sm-12 col-xs-12">
 					<!--------------- Primary Menu ---------------->
 					<nav class="navbar navbar-default primary-menu">
-						<div class="navbar-header">
+						<div class="navbar-header pull-right">
 							<button type="button" data-toggle="collapse" data-target="#navbar-collapse" class="navbar-toggle">
 								<span class="icon-bar"></span>
 								<span class="icon-bar"></span>

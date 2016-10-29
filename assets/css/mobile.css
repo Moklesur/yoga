@@ -13,6 +13,12 @@
         ## Min Width 992px And Max Width 1199px
 ********************************************************/
 @media (min-width: 992px) and (max-width: 1199px) {
+    .product-fix .product-hover {
+        top: 20%;
+    }
+    .parallax-text h1 {
+        font-size: 75px;
+    }
     .woocommerce a.add_to_cart_button{
         padding: .618em 6px;
     }
@@ -33,6 +39,33 @@
         ## Max Width 767px
 ********************************************************/
 @media only screen and (max-width:767px) {
+    .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+        margin: 0 0 30px 0;
+    }
+    .woocommerce-page.columns-3 ul.products li.product, .woocommerce.columns-3 ul.products li.product,.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+        width: 48%;
+    }
+    .navbar-nav {
+        margin: 7.5px 0;
+    }
+    .owl-controls{
+        padding: 0 15px;
+    }
+    .breadcrumb-wrap {
+        margin-top: 30px;
+    }
+    .woocommerce div.product form.cart div.quantity {
+        margin: 0 20px 30px 0;
+    }
+    .woocommerce div.product .woocommerce-tabs ul.tabs li {
+        width: 100%;
+    }
+    .parallax-text h1 {
+        font-size: 40px;
+    }
+    .header {
+        position: relative;
+    }
     .primary-menu .xs-angle-down {
         margin: -10px 0 0 0;
         padding: 9px 15px;
@@ -73,19 +106,36 @@
         width: auto;
     }
     .primary-menu ul li a {
-        padding: 15px;
+        padding: 15px 10px;
+    }
+    .navbar-default .navbar-collapse{
+        width: 100%;
+    }
+    .logo{
+        margin-top: 5px;
+    }
+    .main-slider .slider-inner {
+        top: 20%;
+    }
+    .slider-wrap h1 {
+        font-size: 50px;
+    }
+    .primary-menu ul li a {
+        text-align: left;
     }
     .navbar-default .navbar-toggle{
-
+        margin-right: 0;
+        margin-left: 15px;
+        border-color: #f98a6e;
     }
     .navbar-default .navbar-toggle .icon-bar{
-
+        background-color: #f98a6e;
     }
     .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
-
+        background: #f98a6e;
     }
     .navbar-default .navbar-toggle:focus .icon-bar, .navbar-default .navbar-toggle:hover .icon-bar{
-
+        background-color: #fff;
     }
     .woocommerce .product-fix .compare, .woocommerce .product-fix .yith-wcqv-button{
         visibility: visible;
