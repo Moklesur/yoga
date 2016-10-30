@@ -139,8 +139,8 @@ jQuery(function(){
      *******************************************************************************/
     if(jQuery('.animsition').length){
         jQuery(".animsition").animsition({
-            inClass: 'fade-in-up-sm',
-            outClass: 'fade-out-up-sm',
+            inClass: 'fade-in',
+            outClass: 'fade-out',
             inDuration: 1500,
             outDuration: 800,
             linkElement: 'header a',

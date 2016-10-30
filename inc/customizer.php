@@ -73,14 +73,6 @@ function themetim_customize_register( $wp_customize ) {
 		'description' => '',
 		'priority' => 15,
 	) );
-	$wp_customize->add_setting( 'general', array(
-		'default'           => '',
-	) );
-	$wp_customize->add_control( 'general', array(
-		'label' => __( 'Default', 'text_domain' ),
-		'section' => 'general_settings',
-		'settings' => 'general'
-	) );
 
 	/*********************************************
 	 * Social Links

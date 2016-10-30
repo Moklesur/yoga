@@ -36,7 +36,7 @@
 								<span class="icon-bar"></span>
 							</button>
 						</div>
-						<div class="pull-left logo margin-top-10">
+						<div class="pull-left logo margin-top-20">
 							<?php
 							if (get_theme_mod('site_logo') != '') : ?>
 								<a href="<?php echo site_url('/'); ?>"><img src="<?php echo get_theme_mod('site_logo'); ?>" class="img-responsive" alt="" /></a>
@@ -62,7 +62,7 @@
 						<div id="navbar-collapse" class="navbar-collapse collapse pull-right padding-null text-capitalize">
 							<?php
 							if ( has_nav_menu( 'primary' ) ) :
-								wp_nav_menu( array('menu'              => 'primary', 'theme_location'    => 'primary', 'depth'             => 5, 'container'         => '', 'menu_id' 			=> 'primary-menu', 'container_class'   => 'collapse navbar-collapse', 'container_id'      => 'bs-example-navbar-collapse-1', 'menu_class'        => 'nav navbar-nav', 'fallback_cb'       => 'wp_bootstrap_navwalker::fallback', 'walker'            => new wp_bootstrap_navwalker()));
+								wp_nav_menu( array('menu' => 'primary', 'theme_location' => 'primary', 'depth'             => 5, 'container'         => '', 'menu_id' => 'primary-menu', 'container_class'   => 'collapse navbar-collapse', 'container_id' => 'bs-example-navbar-collapse-1', 'menu_class'        => 'nav navbar-nav', 'fallback_cb' => 'wp_bootstrap_navwalker::fallback', 'walker' => new wp_bootstrap_navwalker()));
 							else: echo '<p class="margin-top-10 pull-left text-capitalize">Please select <a href="/wp-admin/nav-menus.php" class="text-muted">Primary Menu</a> </p>';
 							endif;
 							?>
